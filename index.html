@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no" />
+  <meta name="theme-color" content="#183d30" />
+  <meta name="description" content="100 Doors: Bug Town — Mimi bilan sirli shahardagi 100 eshikni oching." />
+  <title>100 Doors: Bug Town</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <main class="game-frame">
+      <section id="home" class="screen active">
+        <div class="home-art">
+          <div class="topline"><div class="logo">100 DOORS: <b>BUG TOWN</b></div><span class="pill">PUZZLE ADVENTURE</span></div>
+          <div class="forest-shape one"></div><div class="forest-shape two"></div><div class="forest-shape three"></div>
+          <div class="roach-float">🪳</div>
+          <h1>Shahar<br><span>o‘zgaryapti.</span></h1>
+          <p>Mimi sirni topishi kerak — aks holda shahardagi hamma tarakanga aylanadi.</p>
+          <img class="home-girl" src="assets/idle.webp" alt="Mimi" />
+        </div>
+        <div class="home-panel">
+          <div class="dog-line">🐶 “Hamma tarakanga aylanmoqda... <strong>keyingi sen bo‘lishing mumkin.</strong>”</div>
+          <div class="home-actions"><button class="btn" id="continueBtn">▶ DAVOM ETISH</button><button class="btn white" id="mapBtn">🗺 XARITA</button></div>
+          <div class="stats"><div><small>OCHILGAN</small><b id="homeProgress">1/100</b></div><div><small>TANGA</small><b id="homeCoins">0</b></div><div><small>STREAK</small><b>🔥 1</b></div></div>
+        </div>
+      </section>
+
+      <section id="map" class="screen map-screen">
+        <header class="bar"><button class="icon-btn" id="backHome">←</button><h2>Bug Town xaritasi</h2><span class="coin">🪙 <b id="mapCoins">0</b></span></header>
+        <div id="chapters"></div>
+      </section>
+
+      <section id="game" class="screen">
+        <div class="world" id="world">
+          <div class="maze a"></div><div class="maze b"></div><div class="maze c"></div><div class="ground-line"></div>
+          <div class="door" id="door"><span></span></div>
+          <div id="sceneObjects"></div>
+          <img id="girl" class="girl" src="assets/idle.webp" alt="Mimi" />
+        </div>
+        <header class="hud"><button class="icon-btn" id="backMap">←</button><div class="level-tag" id="levelTag">ESHIK 1</div><button class="icon-btn hint" id="hintBtn">💡</button></header>
+        <div class="dpad"><button data-dir="up">▲</button><button data-dir="left">◀</button><button data-dir="right">▶</button><button data-dir="down">▼</button></div>
+        <div class="actions"><button class="round" id="visionBtn">👁</button><button class="round" id="actionBtn">✋</button></div>
+        <div class="message" id="message"></div>
+        <div class="puzzle" id="puzzle"></div>
+        <div class="toast" id="toast"></div>
+        <div class="complete" id="complete"><div class="complete-card"><div class="star">⭐</div><h2>Eshik ochildi!</h2><p id="completeText"></p><div class="reward">+10 🪙</div><button class="btn" id="nextBtn">KEYINGI ESHIK →</button></div></div>
+      </section>
+    </main>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
